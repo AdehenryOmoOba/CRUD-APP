@@ -1,0 +1,150 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 16px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+body{
+    height: 100vh;
+    width: 100vw;
+    background-image: linear-gradient(to bottom right, violet , pink 15%,rgb(159, 111, 190) 70%, rgb(226, 98, 147));
+}
+
+.login{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    min-height: 30rem;
+    width: 25rem;
+    border-radius: 1rem;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-image: linear-gradient(to bottom , #00bc7e, #108775);
+    box-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.2);
+
+}
+
+form{
+    width: 100%;
+    padding: 0 2rem;
+}
+.login h1{
+    font-size: 3rem;
+    color: #fff;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+}
+
+/* .err-msg{
+    padding: 0.5rem 1rem;
+    background-color: #fff;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+    color: red;
+    box-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.2) ;
+
+} */
+
+.username,.password{
+    margin-bottom: 1rem;
+}
+
+label{
+    display: block;
+    color: #fff;
+    font-size: 1rem;
+    margin-bottom: 0.6rem;
+    width: 100%;
+}
+input{
+    appearance: none;
+    background: none;
+    outline: none;
+    border: none;
+    width: 100%;
+}
+
+input:not([type='submit']){
+    display: block;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    background-color: rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0rem 0rem rgba(0, 0, 0, 0);
+    transition: 0.4s;
+    color: #222;
+    font-size: 1.1rem;
+    font-weight: 300;
+    height: 3rem;
+    
+}
+
+input:not([type='submit'])::placeholder{
+    color: #ccc;
+}
+
+
+ input:not([type="submit"]):focus,input:not([type='submit']):valid{
+    background-color: #fff;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+}
+
+
+.submit{
+    display: block;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    background-color: #2f4960;
+    box-shadow: 0 0rem 0rem rgba(0, 0, 0, 0);
+    transition: 0.4s;
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 700;
+    cursor: pointer;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    width: 100%;
+    margin-top: 2rem;
+}
+
+
+.register{
+    display: flex;
+    width: 24rem;
+    justify-content: center;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 1rem;
+    justify-content: space-around;
+    align-items: center;
+}
+.register a{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 6rem;
+}
+
+.register p{
+    font-size: 1.5rem;
+    padding: 0.3rem 1.5rem;
+    padding-bottom: 0.5rem; 
+    border-radius: 0.5rem;
+    color: #fff;
+    box-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.2) ;
+    line-height: 100%;
+    margin-top: 1rem;
+    background-image: linear-gradient(to bottom , #00bc7e, #108775);
+}
+#register-a,#register-b{
+    width: 7rem;
+}
+#register-b{
+    margin-left: 0.5rem;
+}
