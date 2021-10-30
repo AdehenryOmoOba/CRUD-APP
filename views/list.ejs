@@ -10,10 +10,12 @@
     <title>Adehenry: CRUD APPLICATION</title>
 </head>
 <body>
+    <% if(login){ %>
     <div class="login-txt-div">
         <p>Login Successful</p>
         <i class="fas fa-check-circle" ></i>
     </div>
+    <% } %>
     <h3 style="text-align: center;"><a class="btn btn-secondary" href="/insert" style="background-color: black;color: cornflowerblue;"><i class="fa fa-plus"></i> Create New</a> Employee List</h3>
     <table class="table table-striped">
         <thead>

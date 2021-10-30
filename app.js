@@ -81,7 +81,7 @@ server.get('/', isLoggedOut ,(req, res) => {
     res.render('login', {error: loginError, loggedOutMessage: loggedOut,invalidLogin})
 })
 
-server.post('/login', passport.authenticate('local', {successRedirect: '/list', failureRedirect: '/?error=true'}))
+server.post('/login', passport.authenticate('local', {successRedirect: '/list?login=true', failureRedirect: '/?error=true'}))
 
 server.get('/register', (req, res) => {
     res.render('register')
@@ -167,8 +167,9 @@ function insertEmployee(req, res) {
 
 server.get('/list', isLoggedIn ,(req, res) => {
     Employee.find({}, function (err, items)  {
+        const login = req.query.login
         const userName = req.user.username
-        res.render('list', { employeeList: items, username: userName})
+        res.render('list', { employeeList: items, username: userName,login})
 
     })
         
