@@ -73,9 +73,12 @@ const isLoggedOut = (req, res, next) => {
 }
 
 
-// Routes
+// Routess
 server.get('/', isLoggedOut ,(req, res) => {
-    res.render('login')
+    const loginError = req.query.error;
+    const loggedOut = req.query.logout
+    const invalidLogin = 'Login Unsuccessful'
+    res.render('login', {error: loginError, loggedOutMessage: loggedOut,invalidLogin})
 })
 
 server.post('/login', passport.authenticate('local', {successRedirect: '/list', failureRedirect: '/?error=true'}))
@@ -111,7 +114,7 @@ server.post('/register', async (req, res) => {
 
 server.get('/logout', (req, res) => {
     req.logout();
-    res.redirect('/')
+    res.redirect('/?logout=true')
 })
 
 server.get('/insert', (req, res) => {
@@ -164,10 +167,11 @@ function insertEmployee(req, res) {
 
 server.get('/list', isLoggedIn ,(req, res) => {
     Employee.find({}, function (err, items)  {
-        res.render('list', { employeeList: items})
+        const userName = req.user.username
+        res.render('list', { employeeList: items, username: userName})
+
     })
         
-  
 })
 
 // Edit employee data......

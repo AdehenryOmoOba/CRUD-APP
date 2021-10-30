@@ -4,12 +4,26 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../public/welcome.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <link rel="stylesheet" href="../public/style.css">
     <title>Adehenry: HTML CSS JS</title>
 </head>
 <body>
+    <% if(loggedOutMessage){ %>
+        <div class="login-txt-div" id="logout-txt-div">
+            <p>Logout Successful</p>
+            <i class="fas fa-check-circle" id="logout-i"></i>
+        </div>
+     <% } %>
+    <% if(error){ %>
+        <div class="login-txt-div" id="logout-txt-div">
+            <p><%= invalidLogin %></p>
+            <i class="fas fa-window-close"></i>
+        </div>
+     <% } %>
+    
     <div class="register">
         <p>Not registered yet?</p>
         <a href="/register" class="btn btn-info" id="register-b"><i class="fas fa-user-plus"></i> Register</a>
@@ -17,7 +31,9 @@
     
         <div class="login">
             <h1>Login</h1>
-            <!-- <p class="err-msg">Username or Password is invalid</p> -->
+           <% if(error){ %>
+              <p class="err-msg">Username or Password is invalid</p>
+           <% } %>
             <form action="/login" method="post">
                 <div class="username">
                     <label for="username">Username:</label>
@@ -27,7 +43,7 @@
                     <label for="password">Password:</label>
                     <input type="password" name="password" id="password" placeholder="Enter your Password" required/>
                 </div>
-                <button type="submit" class="submit">Login</button>
+                <button type="submit" class="submit"><i class="fas fa-sign-in-alt" id="login-big"></i> Login</button>
             </form>
         </div>
     

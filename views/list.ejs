@@ -4,11 +4,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../public/welcome.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <title>Adehenry: New...NodeJS Express MongoDB CRUD App</title>
 </head>
 <body>
+    <div class="login-txt-div">
+        <p>Login Successful</p>
+        <i class="fas fa-check-circle" ></i>
+    </div>
     <h3 style="text-align: center;"><a class="btn btn-secondary" href="/insert" style="background-color: black;color: cornflowerblue;"><i class="fa fa-plus"></i> Create New</a> Employee List</h3>
     <table class="table table-striped">
         <thead>
@@ -41,6 +46,7 @@
     
         <a href="/logout" class="btn btn-info" style="display: block; margin: 12rem 62rem;"><i class="fas fa-sign-out-alt"></i> Logout</a>
     
+        <p class="welcome">Welcome <%= username %>!</p>
 </body>
 </html>
 

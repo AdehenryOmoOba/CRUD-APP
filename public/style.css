@@ -40,7 +40,7 @@ form{
     margin-bottom: 2rem;
 }
 
-/* .err-msg{
+.err-msg{
     padding: 0.5rem 1rem;
     background-color: #fff;
     border-radius: 0.5rem;
@@ -48,7 +48,7 @@ form{
     color: red;
     box-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.2) ;
 
-} */
+}
 
 .username,.password{
     margin-bottom: 1rem;
@@ -95,6 +95,7 @@ input:not([type='submit'])::placeholder{
 
 
 .submit{
+    position: relative;
     display: block;
     padding: 0.5rem;
     border-radius: 0.5rem;
@@ -110,6 +111,18 @@ input:not([type='submit'])::placeholder{
     border: none;
     width: 100%;
     margin-top: 2rem;
+}
+#login-big{
+    position: absolute;
+    top: 55%;
+    left: 35%;
+    transform: translateY(-50%);
+}
+#register-big{
+    position: absolute;
+    top: 53%;
+    left: 29.5%;
+    transform: translateY(-50%);
 }
 
 
