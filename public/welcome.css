@@ -47,6 +47,10 @@
 #logout-txt-div{
   height: 3rem;
   min-width: 15rem;
+ 
+}
+.logout-txt-div{
+    background-color: red;
 }
 
 #logout-i{
