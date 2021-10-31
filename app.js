@@ -76,15 +76,17 @@ const isLoggedOut = (req, res, next) => {
 // Routess
 server.get('/', isLoggedOut ,(req, res) => {
     const loginError = req.query.error;
-    const loggedOut = req.query.logout
+    const loggedOut = req.query.logout;
+    const registered = req.query.registered ;
     const invalidLogin = 'Login Unsuccessful'
-    res.render('login', {error: loginError, loggedOutMessage: loggedOut,invalidLogin})
+    res.render('login', {error: loginError, loggedOutMessage: loggedOut,invalidLogin, registered})
 })
 
 server.post('/login', passport.authenticate('local', {successRedirect: '/list?login=true', failureRedirect: '/?error=true'}))
 
 server.get('/register', (req, res) => {
-    res.render('register')
+    
+    res.render('register' )
 })
 
 server.post('/register', async (req, res) => {
@@ -102,7 +104,7 @@ server.post('/register', async (req, res) => {
 
         admin.save();
 
-        res.redirect('/')
+        res.redirect('/?registered=true')
 
     } catch  {
         res.redirect('/register')

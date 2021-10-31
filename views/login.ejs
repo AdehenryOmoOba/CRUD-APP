@@ -17,6 +17,12 @@
             <i class="fas fa-check-circle" id="logout-i"></i>
         </div>
      <% } %>
+    <% if(registered){ %>
+        <div class="login-txt-div" id="logout-txt-div">
+            <p>Registration Successful</p>
+            <i class="fas fa-check-circle" id="registration-i"></i>
+        </div>
+     <% } %>
     <% if(error){ %>
         <div class="login-txt-div logout-txt-div" id="logout-txt-div">
             <p><%= invalidLogin %></p>

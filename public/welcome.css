@@ -27,15 +27,12 @@
     align-items: center;
     color: aquamarine;
     visibility: hidden;
-   animation: flash 3s ease-in-out 0.5s;
+   animation: flash 3s ease 0.5s;
 }
 
 @keyframes flash {
     0% {opacity: 0; visibility: hidden;}
-    20% {opacity: 0.5; visibility: visible;}
-    30% {opacity: 1; visibility: visible;}
-    60% {opacity: 1; visibility: visible;}
-    80% {opacity: 0.5; visibility: visible;}
+    50% {opacity: 1; visibility: visible;}
     100% {opacity: 0; visibility: hidden;}
 }
 
@@ -62,4 +59,9 @@
     position: relative;
     bottom: 5%;
     line-height: 100%;
+}
+#registration-i{
+    position: relative;
+    bottom: 5%;
+   margin-left: 1rem;
 }
