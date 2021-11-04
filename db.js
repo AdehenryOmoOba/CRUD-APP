@@ -1,6 +1,6 @@
 require('./models/employee-model')
 const mongoose = require('mongoose');
-const uri =  "mongodb+srv://Adehenry:Adehenry%401@cluster0.up9zn.mongodb.net/adehenrydatabase?retryWrites=true&w=majority"
+const uri =  process.env.DB_URI;
 
 mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true}, (err) => {
 
