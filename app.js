@@ -15,7 +15,6 @@ const passport           = require('passport')
 const LocalStrategy      = require('passport-local');
 const session            = require('express-session');
 const mongoose           = require('mongoose');
-const path               = require('path/posix');
 const Employee           = require('./models/employee-model')
 const Admin              = require('./models/admin-model')
 const bcrypt             = require('bcrypt');
