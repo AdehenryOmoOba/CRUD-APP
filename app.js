@@ -201,7 +201,8 @@ server.get('/delete/:id', (req, res) => {
 
 
 // Server
-server.listen(5500, () =>{
+const PORT = process.env.PORT || 5500
+server.listen(PORT, () =>{
     console.log('Server is running on port 5500...')
 })
 
